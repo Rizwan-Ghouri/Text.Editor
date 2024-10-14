@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    overflow-x: hidden;
     /* background-color: #697565; */
 }
 
@@ -9,7 +9,6 @@ body {
     color: #ECDFCC;
     /* background: linear-gradient(360deg, #181C14, #697565); */
 }
-
 /* Header style****************************** */
 .header {
     background-color: #181C14;
@@ -263,7 +262,6 @@ a{
 .footer{
     display: none;
 }
-
 
 @media(max-width : 1115px)  {
     .header {
