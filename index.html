@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text-Editor</title>
+    <link rel="icon" type="image/svg+xml" href="https://addons.mozilla.org/user-media/previews/full/228/228908.png?modified=1622134213" />
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            <div class="head">
+                <h1 class="heading"><a href="index.html">Text.Editor</a></h1>
+            </div>
+            <div class="divfonts2">
+                <div class="div_menu1">
+                    <button class="btnmenu" id="btnmenu"><i class="i fa-solid fa-bars fa-fade"></i></button>
+                    <button class="btnmenu1" id="btnmenu1"><i class="i fa-solid fa-bars fa-fade"></i></button>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="footer">
+        <div class="aside_textedit">
+            <div class="aside_divfonts">
+                <select title="Font face" class="aside_fonts" name="" id="">
+                    <option disabled selected>Select font</option>
+                    <option>Time New Romen</option>
+                    <option>Calibri</option>
+                    <option>Algerian</option>
+                    <option>MV Boli</option>
+                </select><br>
+                <select title="Font size" class="aside_fontsize" name="" id="">
+                    <option disabled selected>Select font size</option>
+                    <option>8</option>
+                    <option>10</option>
+                    <option>12</option>
+                    <option>14</option>
+                    <option>16</option>
+                    <option>18</option>
+                    <option>20</option>
+                    <option>22</option>
+                    <option>24</option>
+                    <option>26</option>
+                    <option>28</option>
+                    <option>36</option>
+                    <option>48</option>
+                    <option>72</option>
+                </select>
+                <select title="Font size" class="aside_fontsize" name="" id="">
+                    <option disabled selected>Select font align</option>
+                    <option>left</option>
+                    <option>center</option>
+                    <option>right</option>
+                </select>
+                <div class="aside_fonttypes">
+                    <select title="Font type" class="aside_fonttype" name="" id="">
+                        <option disabled selected>Aa</option>
+                        <option>Sentensece case</option>
+                        <option>UPPERCASE</option>
+                        <option>lower case</option>
+                        <option>Capitalization</option>
+                    </select>
+                </div>
+                <div class="aside_fontupdn">
+                    <button title="Font Increase" class="aside_btnupdn">A+</button>
+                    <button title="Font Decrease" class="aside_btnupdn">A-</button>
+                    <button title="Font formating" class="aside_btnupdn">A/a</button>
+                </div>
+            </div>
+            <div class="aside_divfonts">
+                <div class="aside_fontbtn">
+                    <button title="Font Increase" class="aside_btnB">B</button>
+                    <button title="Font Decrease" class="aside_btnI">I</button>
+                    <button title="Font formating" class="aside_btnU">U</button>
+                    <button title="Font formating" class="aside_btns">abc</button>
+                </div>
+
+                <div class="aside_fontcolor">
+                    <fieldset class="aside_fieldset">
+                        <legend>Font Color</legend>
+                        <input title="Font color" class="aside_color" type="color">
+                    </fieldset>
+                    <fieldset class="aside_fieldset">
+                        <legend>Background Color</legend>
+                        <input title="Back color" class="aside_color" type="color">
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="sec">
+        <aside class="aside" id="aside">
+            <div class="aside_textedit">
+                <div class="aside_divfonts">
+                    <select title="Font face" class="aside_fonts" name="" id="aside_fonts">
+                        <!-- <option disabled selected>Select font</option> -->
+                        <option>Time New Romen</option>
+                        <option>Calibri</option>
+                        <option>Arial</option>
+                        <option>MV Boli</option>
+                    </select><br>
+                    <select title="Font size" class="aside_fontsize" name="" id="">
+                        <option disabled selected>Select font size</option>
+                        <option>8</option>
+                        <option>10</option>
+                        <option>12</option>
+                        <option>14</option>
+                        <option>16</option>
+                        <option>18</option>
+                        <option>20</option>
+                        <option>22</option>
+                        <option>24</option>
+                        <option>26</option>
+                        <option>28</option>
+                        <option>36</option>
+                        <option>48</option>
+                        <option>72</option>
+                    </select>
+                    <select title="Font size" class="aside_fontsize" name="" id="">
+                        <option disabled selected>Select font align</option>
+                        <option>left</option>
+                        <option>center</option>
+                        <option>right</option>
+                    </select>
+                    <div class="aside_fontupdn">
+                        <button title="Font Increase" class="aside_btnupdn">A+</button>
+                        <button title="Font Decrease" class="aside_btnupdn">A-</button>
+                        <button title="Font formating" class="aside_btnupdn">A/a</button>
+                    </div>
+                </div>
+                <div class="aside_divfonts">
+                    <div class="aside_fontbtn">
+                        <button title="Font Increase" class="aside_btnB">B</button>
+                        <button title="Font Decrease" class="aside_btnI">I</button>
+                        <button title="Font formating" class="aside_btnU">U</button>
+                        <button title="Font formating" class="aside_btns">abc</button>
+                    </div>
+                    <div class="aside_fonttypes">
+                        <select title="Font type" class="aside_fonttype" name="" id="">
+                            <option disabled selected>Aa</option>
+                            <option>Sentensece case</option>
+                            <option>UPPERCASE</option>
+                            <option>lower case</option>
+                            <option>Capitalization</option>
+                        </select>
+                    </div>
+                    <div class="aside_fontcolor">
+                        <fieldset class="aside_fieldset">
+                            <legend>Font Color</legend>
+                            <input title="Font color" class="aside_color" type="color">
+                        </fieldset>
+                        <fieldset class="aside_fieldset">
+                            <legend>Background Color</legend>
+                            <input title="Back color" class="aside_color" type="color">
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="main">
+            <textarea class="text_area" name="" id="textArea" cols="" rows="20"></textarea>
+        </main>
+    </section>
+    <script src="app.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
