@@ -13,12 +13,37 @@ btnmenu1.addEventListener("click",function(){
     aside.style.display = "none"
 })
 
-
 const textArea = document.getElementById("textArea");
+const fontSizes = document.getElementById("aside_fontSize");
+const fontAligns = document.getElementById("aside_fontalign");
+const fontStyles = document.getElementById("aside_fontStyle");
+const btnfontUp = document.getElementById("fontUp")
+const btnfontDown = document.getElementById("fontDown")
 const aside_fonts = document.getElementById("aside_fonts");
-aside_fonts.addEventListener("click",()=>{
-        if(aside_fonts.value == textArea.value.selected){
-            let getfont = aside_fonts.value;
-         textArea.value.selected = textArea.style.fontFamily =  `${getfont}`;    
-        }
+aside_fonts.addEventListener("change",()=>{
+        let getfont = aside_fonts.value;
+        textArea.value.selected = textArea.style.fontFamily =  `${getfont}`; 
+   
+    })
+
+    fontSizes.addEventListener("click",()=>{
+        let fontSize = fontSizes.value;
+        textArea.value.selected = textArea.style.fontSize = `${fontSize}`;
+    })
+    fontAligns.addEventListener("click",()=>{
+        let fontAlign = fontAligns.value;
+        textArea.value.selected = textArea.style.textAlign = `${fontAlign}`;
+    })
+    let num = 20
+    btnfontUp.addEventListener("click",()=>{
+        let inc = num++
+            textArea.value.selected = textArea.style.fontSize = `${inc}px`;
+    })
+    btnfontDown.addEventListener("click",()=>{
+            let dic = --num
+            textArea.value.selected = textArea.style.fontSize = `${dic}px`;
+    })
+    fontStyles.addEventListener("click",()=>{
+        let fontStyle = fontStyles.value;
+        textArea.value.selected = textArea.style.textTransform = `${fontStyle}`;
     })
