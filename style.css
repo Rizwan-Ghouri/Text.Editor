@@ -4,7 +4,9 @@
     overflow-x: hidden;
     /* background-color: #697565; */
 }
-
+.editeading{
+    color: yellow;
+}
 body {
     color: #ECDFCC;
     /* background: linear-gradient(360deg, #181C14, #697565); */
@@ -257,11 +259,6 @@ a{
 }
 .aside_textedit::-webkit-scrollbar-thumb{
     background-color: #181C14;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
 }
 .footer{
     display: none;
@@ -325,11 +322,7 @@ a{
     }
     .aside_textedit::-webkit-scrollbar-thumb{
         background-color: #181C14;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
+       
 }
 }
 @media(max-width : 790px) {
@@ -384,11 +377,6 @@ a{
     }
     .aside_textedit::-webkit-scrollbar-thumb{
         background-color: #181C14;
-        border-radius: 5px;
-        -webkit-border-radius: 5px;
-        -moz-border-radius: 5px;
-        -ms-border-radius: 5px;
-        -o-border-radius: 5px;
 }
 }
 
@@ -437,12 +425,8 @@ a{
         background: #ffffff;
     }
     .aside_textedit::-webkit-scrollbar-thumb{
-        background-color: #010200;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
+        background-color: #19554b;
+    
 }
     .aside_divfonts {
         width: 100%;
@@ -594,12 +578,8 @@ a{
         background: #ffffff;
     }
     .aside_textedit::-webkit-scrollbar-thumb{
-        background-color: #010200;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
+        background-color: #ce0000;
+        
 }
     .aside_divfonts {
         width: 100%;
