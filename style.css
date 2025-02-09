@@ -9,12 +9,14 @@
 }
 body {
     color: #ECDFCC;
+    background: #181C14
     /* background: linear-gradient(360deg, #181C14, #697565); */
 }
 /* Header style****************************** */
 .header {
     background-color: #181C14;
     padding: 7px;
+    border-bottom: 2px solid red;
 }
 
 .nav {
@@ -117,7 +119,6 @@ a{
 .aside_fonts {
     width: 90%;
     margin-top: 10px;
-    margin-bottom: 10px;
     outline: none;
     padding: 5px;
     color: #ECDFCC;
@@ -127,7 +128,6 @@ a{
 .aside_fontsize {
     width: 90%;
     margin-top: 10px;
-    margin-bottom: 10px;
     outline: none;
     padding: 5px;
     color: #ECDFCC;
@@ -139,13 +139,13 @@ a{
 }
 
 .aside_btnupdn {
-    width: 47%;
+    width: 99%;
     padding: 5px;
     color: #ECDFCC;
     background-color: #181C14;
 }
 .aside_btnupdn1 {
-    width: 97%;
+    width: 99%;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 5px;
@@ -159,22 +159,25 @@ a{
 }
 
 .aside_btnB {
-    width:40%;
+    width:90%;
     padding: 5px;
+    margin: 3px;
     color: #ECDFCC;
     background-color: #181C14;
 }
 
 .aside_btnI {
-    width:40%;
+    width:90%;
     padding: 5px;
+    margin: 3px;
     color: #ECDFCC;
     background-color: #181C14;
 }
 
 .aside_btnU {
-    width:40%;
+    width:90%;
     padding: 5px;
+    margin: 3px;
     color: #ECDFCC;
     background-color: #181C14;
 }
@@ -241,7 +244,7 @@ a{
 
 .text_area {
     width: 100%;
-    /* height: 520px; */
+    height: 520px;
     padding: 15px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
@@ -267,6 +270,7 @@ a{
 @media(max-width : 1115px)  {
     .header {
         background-color: #181C14;
+
     }
     .head {
         width: 100%;
@@ -276,7 +280,6 @@ a{
         justify-content: center;
         align-items: center;
         text-align: center;
-        /* border: 1px solid red; */
     }
     .heading {
         text-align: start;
@@ -302,7 +305,7 @@ a{
     }
     .aside {
         border-right: 4px solid #181C14;
-        width: 30%;
+        width: 50%;
         text-align: center;
         background-color: #181C14;
         display: none;
@@ -425,7 +428,7 @@ a{
         background: #ffffff;
     }
     .aside_textedit::-webkit-scrollbar-thumb{
-        background-color: #19554b;
+        background-color: #ce0000;
     
 }
     .aside_divfonts {
@@ -456,52 +459,35 @@ a{
     }
     
     .aside_btnupdn {
-        width: 25%;
+        width: 32%;
         padding: 5px;
         color: #ECDFCC;
         background-color: #181C14;
     }
-    
-    .aside_fontbtn {
-        margin-top: 10px;
-    }
-    
+        
     .aside_btnB {
-        width:20%;
+        width:30%;
         padding: 5px;
-        margin: 2% 0%;
+        /* margin: 2% 0%; */
         color: #ECDFCC;
         background-color: #181C14;
     }
     
     .aside_btnI {
-        width:20%;
+        width:30%;
         padding: 5px;
-        margin: 2% 0%;
+        /* margin: 2% 0%; */
         color: #ECDFCC;
         background-color: #181C14;
     }
     
     .aside_btnU {
-        width:20%;
+        width:30%;
         padding: 5px;
-        margin: 2% 0%;
+        /* margin: 2% 0%; */
         color: #ECDFCC;
         background-color: #181C14;
     }
-    
-    .aside_btns {
-        width: 20%;
-        padding: 5px;
-        margin: 2% 0%;
-        color: #ECDFCC;
-        background-color: #181C14;
-    }
-    
-    /* .aside_fonttypes {
-        /* margin-top: 10px;
-        margin-bottom: 10px; 
-    } */
     
     .aside_fonttype {
         width: 90%;
@@ -609,8 +595,9 @@ a{
     }
     
     .aside_btnupdn {
-        width: 25%;
+        width: 90%;
         padding: 5px;
+        margin: 5px;
         color: #ECDFCC;
         background-color: #181C14;
     }
@@ -620,7 +607,7 @@ a{
     }
     
     .aside_btnB {
-        width:20%;
+        width:85%;
         padding: 5px;
         margin: 2% 0%;
         color: #ECDFCC;
@@ -628,7 +615,7 @@ a{
     }
     
     .aside_btnI {
-        width:20%;
+        width:85%;
         padding: 5px;
         margin: 2% 0%;
         color: #ECDFCC;
@@ -636,25 +623,12 @@ a{
     }
     
     .aside_btnU {
-        width:20%;
+        width:85%;
         padding: 5px;
         margin: 2% 0%;
         color: #ECDFCC;
         background-color: #181C14;
     }
-    
-    .aside_btns {
-        width: 20%;
-        padding: 5px;
-        margin: 2% 0%;
-        color: #ECDFCC;
-        background-color: #181C14;
-    }
-    
-    /* .aside_fonttypes {
-        /* margin-top: 10px;
-        margin-bottom: 10px; 
-    } */
     
     .aside_fonttype {
         width: 90%;
