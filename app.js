@@ -28,6 +28,7 @@ const format_Change = document.getElementById("formatChange");
 const font_color = document.getElementById("Fontcolor");
 const back_color = document.getElementById("Backcolor");
 const btn_download = document.getElementById("btndownload");
+const btn_download1 = document.getElementById("btndownload1");
 
 fontSizes.addEventListener("click", () => {
     let fontSize = fontSizes.value;
@@ -233,6 +234,64 @@ back_color1.addEventListener("change", ()=>{
 // });
 
 btn_download.addEventListener("click", () => {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Get text area styles
+    const fontSize = parseInt(window.getComputedStyle(textArea).fontSize);
+    const fontFamily = window.getComputedStyle(textArea).fontFamily;
+    const fontWeight = window.getComputedStyle(textArea).fontWeight;
+    const fontStyle = window.getComputedStyle(textArea).fontStyle;
+    const textAlign = window.getComputedStyle(textArea).textAlign;
+    const textColor = window.getComputedStyle(textArea).color;
+    const bgColor = window.getComputedStyle(textArea).backgroundColor;
+
+    // Convert color to RGB
+    const textRGB = textColor.match(/\d+/g);
+    const bgRGB = bgColor.match(/\d+/g);
+
+    // Set background color
+    doc.setFillColor(parseInt(bgRGB[0]), parseInt(bgRGB[1]), parseInt(bgRGB[2]));
+    doc.rect(0, 0, 210, 297, "F"); // Full page background
+
+    // Set text styles
+    doc.setFont(fontFamily, fontStyle === "italic" ? "italic" : "normal");
+    doc.setFontSize(fontSize);
+    doc.setTextColor(parseInt(textRGB[0]), parseInt(textRGB[1]), parseInt(textRGB[2]));
+
+    if (fontWeight === "bold") {
+        doc.setFont(undefined, "bold");
+    }
+
+    // Split text into multiple lines if needed
+    const text = textArea.value;
+    const marginLeft = 10;
+    const marginTop = 20;
+    const maxWidth = 180;
+    const lineHeight = 10;
+
+    let align = "left";
+    let textX = marginLeft;
+
+    if (textAlign === "center") {
+        align = "center";
+        textX = 105; // Center of A4 (210mm width / 2)
+    } else if (textAlign === "right") {
+        align = "right";
+        textX = marginRight;
+    }
+
+    // Split text into multiple lines
+    const lines = doc.splitTextToSize(text, maxWidth);
+
+    // Draw text with alignment
+    doc.text(lines, textX, marginTop + lineHeight, { align: align });
+
+
+    // Save PDF
+    doc.save("download.pdf");
+});
+btn_download1.addEventListener("click", () => {
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
 
