@@ -23,7 +23,6 @@
                 <div class="div_menu1">
                     <button class="btnmenu" id="btnmenu"><i class="i fa-solid fa-bars fa-fade"></i></button>
                     <button class="btnmenu1" id="btnmenu1" style="font-size: xx-large;">X</button>
-                    <!-- <button class="btnmenu1" id="btnmenu1"><i class="i fa-solid fa-bars fa-fade"></i></button> -->
                 </div>
             </div>
         </nav>
@@ -38,7 +37,7 @@
                         <option>Algerian</option>
                         <option>Arial</option>
                         <option>MV Boli</option>
-                </select><br>
+                    </select><br>
                 <select title="Font size" class="aside_fontsize" id="aside_fontSize1">
                     <option disabled selected>Select font size</option>
                     <option>small</option>
@@ -71,7 +70,7 @@
                     <button title="Font Decrease" class="aside_btnI" id="btnitalic1">Italic</button>
                     <button title="Font formating" class="aside_btnU"id="btnunderline1">Underline</button>
                 </div>
-
+                
                 <div class="aside_fontcolor">
                     <fieldset class="aside_fieldset">
                         <legend>Font Color</legend>
@@ -83,6 +82,8 @@
                     </fieldset>
                 </div>
             </div>
+            <button class="btndownload" id="btndownload">Download</button>
+
         </div>
     </section>
 
@@ -128,7 +129,7 @@
                     <div class="aside_fontupdn">
                         <button title="Font Increase" class="aside_btnupdn" id="fontUp">A+</button>
                         <button title="Font Decrease" class="aside_btnupdn" id="fontDown">A-</button>
-                        <button title="Font formating" class="aside_btnupdn1" id="formatChange">Clear formating</button>
+                        <button title="Font formating" class="aside_btnupdn" id="formatChange">Clear formating</button>
                     </div>
                 </div>
                     <div class="aside_fontcolor">
@@ -140,6 +141,7 @@
                             <legend>Background Color</legend>
                             <input id="Backcolor" title="Back color" class="aside_color" type="color">
                         </fieldset>
+                        <button class="btndownload" id="btndownload">Download</button>
                     </div>
                 </div>
             </div>
@@ -149,6 +151,8 @@
             <textarea class="text_area" name="" id="textArea" cols="" rows="20"></textarea>
         </main>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>    
     <script src="app.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
