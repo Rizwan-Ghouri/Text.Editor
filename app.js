@@ -265,10 +265,13 @@ btn_download.addEventListener("click", () => {
 
     // Split text into multiple lines if needed
     const text = textArea.value;
+    // PDF settings
     const marginLeft = 10;
     const marginTop = 20;
     const maxWidth = 180;
     const lineHeight = 10;
+    const pageHeight = 297; // A4 height in mm
+    const bottomMargin = 20;
 
     let align = "left";
     let textX = marginLeft;
@@ -281,11 +284,21 @@ btn_download.addEventListener("click", () => {
         textX = marginRight;
     }
 
-    // Split text into multiple lines
-    const lines = doc.splitTextToSize(text, maxWidth);
+   // Split text into multiple lines
+   let lines = doc.splitTextToSize(text, maxWidth);
+   let y = marginTop;
 
-    // Draw text with alignment
-    doc.text(lines, textX, marginTop + lineHeight, { align: align });
+   // Loop through lines and add pages if needed
+   lines.forEach((line, index) => {
+       if (y + lineHeight > pageHeight - bottomMargin) {
+           doc.addPage();
+           doc.setFillColor(parseInt(bgRGB[0]), parseInt(bgRGB[1]), parseInt(bgRGB[2]));
+           doc.rect(0, 0, 210, 297, "F"); // New page background
+           y = marginTop;
+       }
+       doc.text(line, textX, y, { align: align });
+       y += lineHeight;
+   });
 
 
     // Save PDF

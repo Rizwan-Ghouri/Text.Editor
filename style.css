@@ -275,7 +275,7 @@ a{
     box-shadow: 5px 5px 10px 1px black;
     outline: none;
     resize: none;
-    overflow-y: scroll;
+    /* overflow-y: scroll; */
 }
 .aside_textedit::-webkit-scrollbar{
     width: 10px;
