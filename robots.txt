@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://yourgithubpageslink.com/sitemap.xml
